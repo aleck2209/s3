@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #eeeeee;
+  --title: #213c51;
+  --text: #303841;
+  --primary: #991e7e;
+  --primary-hover: #e639c0;
+  --secondary: #e966cc31;
+  --accent: #213c51;
+  --muted: #64748b;
+  --bg-input: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #213c51;
+    --bg-secondary: #303841;
+    --title: #f5f5f5;
+    --text: #eeeeee;
+    --primary: #991e7e;
+    --primary-hover: #e639c0;
+    --secondary: #e966cc31;
+    --accent: #eeeeee;
+    --bg-input: #f5f5f5;
+  }
+}
+
+/* Mise en page globale */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--bg-secondary);
+}
+
+/* En-tête globale du site */
+header {
+  background-color: var(--bg-primary);
+  padding: 1.5rem 0 0 0;
+  margin-bottom: 2.5rem;
+  box-shadow: 0px 2px 4px var(--secondary);
+}
+
+.intro {
+  color: var(--muted);
+  margin: 0 0 2rem 0;
+  padding: 0 3rem;
+  font-size: 0.875rem;
+}
+
+/* Barre de navigation */
+nav {
+  background-color: var(--secondary);
+  padding: 1.2rem 3rem;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: var(--primary-hover);
+  transform: scale(1.02);
+}
+
+/* titres */
+h1,
+h2,
+h3 {
+  color: var(--title);
+  font-family: "Anton", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.025em;
+  padding: 0 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--primary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* paragraphe */
+p {
+  margin: 0 0 1.25rem 0;
+  line-height: 1.5;
+}
+/* Éléments de structure et blocs */
+
+main {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+article {
+  background-color: var(--bg-primary);
+  padding: 1.75rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 2px 4px 2px var(--secondary);
+}
+
+aside {
+  background-color: var(--secondary);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 5px 5px 0;
+  font-size: 0.95rem;
+  padding: 1.25rem;
+  margin: 2rem 0;
+}
+
+/* Pied de page */
+footer {
+  margin-top: 5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  background-color: var(--bg-primary);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.copyright {
+  margin: 1rem 0;
+}
+
+/* Button article */
+.article-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em;
+  background-color: var(--primary);
+  color: var(--bg-primary);
+  border-radius: 5px;
+  transition:
+    background-color 0.4s ease;
+  font-weight: 600;
+}
+
+.article-btn:hover {
+  background-color: var(--primary-hover);
+}
+.article-btn:active {
+    transform: scale(.98);
+}
+
+/* Formulaire */
+form {
+  background-color: var(--bg-primary);
+  padding: 1.75rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 2px 4px 2px var(--secondary);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  background-color: var(--bg-secondary);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s;
+}
+
+input:focus,
+textarea:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 5px 2px var(--secondary);
+  outline: none;
+  border: none;
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--bg-primary);
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
