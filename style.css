@@ -23,9 +23,9 @@
     --bg-secondary: #303841;
     --title: #f5f5f5;
     --text: #eeeeee;
-    --primary: #991e7e;
-    --primary-hover: #e639c0;
-    --secondary: #e966cc31;
+    --primary: #e639c0;
+    --primary-hover: #ff03c8;
+    --secondary: #eb97d931;
     --accent: #eeeeee;
     --bg-input: #f5f5f5;
   }
@@ -123,6 +123,7 @@ p {
 main {
   max-width: 850px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 section {
@@ -168,8 +169,7 @@ footer {
   background-color: var(--primary);
   color: var(--bg-primary);
   border-radius: 5px;
-  transition:
-    background-color 0.4s ease;
+  transition: background-color 0.4s ease;
   font-weight: 600;
 }
 
@@ -177,7 +177,7 @@ footer {
   background-color: var(--primary-hover);
 }
 .article-btn:active {
-    transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* Formulaire */
@@ -235,9 +235,9 @@ button {
 }
 
 button:hover {
-    background-color: var(--primary-hover);
+  background-color: var(--primary-hover);
 }
 
 button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
